@@ -8,11 +8,10 @@ public class DomainConfig {
 
     private static final Properties PROPERTIES = new Properties();
 
-    // Bloco estático para carregar o arquivo de propriedades uma vez
     static {
         try (InputStream input = DomainConfig.class.getClassLoader().getResourceAsStream("DomainResources.properties")) {
             if (input == null) {
-                throw new IOException("Arquivo de propriedades não encontrado no classpath.");
+                throw new IOException("Arquivo de propriedades não encontrado.");
             }
             PROPERTIES.load(input);
         } catch (IOException ex) {

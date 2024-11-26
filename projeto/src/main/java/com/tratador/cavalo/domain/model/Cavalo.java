@@ -26,6 +26,7 @@ public class Cavalo {
     @Getter @Setter
     private String nome;
 
+
     @Column(name = "dt_aquisicao")
     @Getter @Setter
     private Date dataAquisicao;
